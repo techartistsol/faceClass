@@ -1,0 +1,8 @@
+
+sel = cmds.ls(type = 'displayLayer')
+for node in sel:
+    if node == 'defaultLayer':
+        pass
+    else:     
+        print node        
+        cmds.delete(node)

@@ -1,4 +1,5 @@
 
+#removeLayers
 sel = cmds.ls(type = 'displayLayer')
 for node in sel:
     if node == 'defaultLayer':
@@ -6,3 +7,13 @@ for node in sel:
     else:     
         print node        
         cmds.delete(node)
+        
+  
+  
+#createLayers
+faceLyrList = ['faceGeoLyr', 'eyeGeoLyr', 'upperMouthGeoLyr', 'lowerMouthGeoLyr']
+
+
+for node in faceLyrList:
+    cmds.createDisplayLayer( name =  node,empty = True)
+

@@ -1,0 +1,7 @@
+from maya import cmds
+selList = cmds.ls(sl=True)
+
+for x in selList:
+	cmds.setAttr(x + '.type', 18)
+	cmds.setAttr(x + '.drawLabel', 1)
+	cmds.setAttr(x + '.otherType', x, type='string')
